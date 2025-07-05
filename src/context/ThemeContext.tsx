@@ -13,7 +13,7 @@ const ThemeContext = createContext<{
     toggleTheme: () => void;
 }>({ state: { theme: 'light' }, toggleTheme: () => { } });
 
-const themeReducer = (state: ThemeState, action: ThemeAction): ThemeState => {
+export const themeReducer = (state: ThemeState, action: ThemeAction): ThemeState => {
     switch (action.type) {
         case 'TOGGLE_THEME':
             return { theme: state.theme === 'light' ? 'dark' : 'light' };
