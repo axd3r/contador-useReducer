@@ -72,7 +72,18 @@ Este proyecto incluye un **dark mode** controlado por `Context` + `useReducer`. 
 
 ## 📸 Capturas de pantalla
 
-> Puedes agregar capturas si deseas mostrar el UI con modo claro/oscuro y múltiples contadores.
+### 🧮 Inicio
+![Contador simple](./public/image.png)
+
+### 🧮 Contador simple
+![Contador simple](./public/contador-simple.png)
+
+### 💾 MultiContador con Storage
+![MultiContador con Storage](./public/multi%20contador.png)
+
+### 🌙 Modo Claro (Lithg Mode)
+![Dark Mode](./public/Tema%20blanco.png)
+
 
 ## 📜 Licencia
 
