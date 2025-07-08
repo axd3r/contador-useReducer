@@ -7,10 +7,10 @@ export default function AppRouter() {
   return (
     <BrowserRouter>
       <nav style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/" style={{ marginRight: '1rem' }}>🏠 Inicio</Link>
-        <Link to="/contador" style={{ marginRight: '1rem' }}>🧮 Contador</Link>
-        <Link to="/multi" style={{ marginRight: '1rem' }}>🔢 MultiContador</Link>
-        <Link to="/multi-storage">💾 Multi + Storage</Link>
+        <Link to="/" style={{ marginRight: '1rem' }}><button>🏠 Inicio</button></Link>
+        <Link to="/contador" style={{ marginRight: '1rem' }}><button>🧮 Contador</button></Link>
+        <Link to="/multi" style={{ marginRight: '1rem' }}><button>🔢 MultiContador</button></Link>
+        <Link to="/multi-storage"><button>💾 Multi + Storage</button></Link>
       </nav>
 
       <Routes>

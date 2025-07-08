@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# 🧮 Contador con useReducer + React + Vitest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una colección de contadores desarrollados en **React** usando `useReducer`, `Context API` y `localStorage` para practicar conceptos avanzados de estado, pruebas unitarias y persistencia.
 
-Currently, two official plugins are available:
+## 🧰 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ React + TypeScript
+- ⚙️ useReducer + Context API
+- 💾 localStorage (persistencia)
+- 🧪 Vitest + Testing Library (pruebas)
+- 🌗 Dark mode (contextual)
+- 📦 Vite (entorno de desarrollo rápido)
 
-## Expanding the ESLint configuration
+## 📁 Estructura del proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/
+│   ├── Counter.tsx              # Contador básico
+│   ├── MultiCounter.tsx         # Múltiples contadores en memoria
+│   ├── MultiCounterStorage.tsx  # Múltiples contadores persistentes
+│   └── __tests__/               # Pruebas unitarias
+|        ├── Counter.test.tsx
+|        ├── MultiCounterReducer.test.ts
+|        ├── MultiCountertStorage.test.tsx
+|        └── ThemeContext.test.ts
+├── context/
+│   └── ThemeContext.tsx         # Contexto de tema (light/dark)
+├── router/
+│   └── Router.tsx
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Instalación y ejecución
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clona el repositorio:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/axd3r/contador-useReducer.git
+cd contador-usereducer
 ```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecuta el proyecto en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+4. Corre las pruebas:
+
+```bash
+npm run test
+```
+
+## 🧪 Pruebas cubiertas
+
+- Componente `Counter`: renderizado inicial, incremento y decremento.
+- Reducer de múltiples contadores.
+- Persistencia de datos en `localStorage` en `MultiCounterStorage`.
+- Contexto de tema y `themeReducer`.
+
+## 🌗 Modo oscuro
+
+Este proyecto incluye un **dark mode** controlado por `Context` + `useReducer`. Se guarda automáticamente en `localStorage` y aplica la clase correspondiente al `<body>`.
+
+## 📸 Capturas de pantalla
+
+> Puedes agregar capturas si deseas mostrar el UI con modo claro/oscuro y múltiples contadores.
+
+## 📜 Licencia
+
+Este proyecto está bajo la licencia MIT.
